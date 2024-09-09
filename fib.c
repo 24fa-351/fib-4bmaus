@@ -9,9 +9,9 @@ int fibonacci_iterative(int position) {
     }
     
     int first = 0;
-    int second = 1;
+    int second = 1; 
     int next;
-    for (int current = 3; current <= position; current++) {  
+    for (int current_position = 3; current_position <= position; current_position++) {  
         next = first + second;
         first = second;
         second = next;
@@ -19,13 +19,13 @@ int fibonacci_iterative(int position) {
     return second;
 }
 
-int recursive(int position) {
+int fibonacci_recursive(int position) {
     if (position == 1) {
         return 0;
     } else if (position == 2) {
         return 1;
     }
-    return recursive(position - 1) + recursive(position - 2);
+    return fibonacci_recursive(position - 1) + fibonacci_recursive(position - 2);
 }
 
 int main(int argc, char *argv[]) {
